@@ -1,0 +1,73 @@
+select{
+  width: 85%;
+    height: 35px;
+    border: none;
+    background: #e9a6b1;
+    position: relative;
+    left: 8%;
+    outline: 6px;
+    color: white;
+    box-shadow: 1px 2px 7px #6c5255;
+    padding: 10px;
+}
+select:hover{
+  background:#d3929d;
+}
+.indicator-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 50px;
+  padding: 30px;
+}
+
+.indicator {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.indicator-circle {
+  background-color: #d5cfcf;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+}
+
+.indicator-line {
+  width: 90%;
+  height: 15px;
+  background: #ccc;
+}
+
+.indicator:last-child {
+  width: auto !important;
+}
+
+.indicator:last-child .indicator-line {
+  display: none;
+}
+
+.indicator.complete .indicator-circle,
+.indicator.complete .indicator-line {
+  background-color: green;
+}
+
+.indicator.in-progress .indicator-circle {
+  border: 5px solid green;
+  background-color: #fff;
+}
+
+.indicator-text {
+  display: none;
+  position: absolute;
+  left: 10%;
+  top: 50px;
+  transform: translate(-50%, 0px);
+}
+
+.indicator.in-progress:hover .indicator-text,
+.indicator.complete:hover .indicator-text {
+  display: block;
+}
